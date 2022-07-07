@@ -4,6 +4,8 @@ import {useState, useEffect, useRef} from 'react'
 import ButtonCV from '../components/buttons/Button';
 import Inputs from '../components/contact/Inputs';
 import MsjError from '../components/contact/MsjError';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faPhone,faLocationDot,faEnvelope,   } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -19,7 +21,9 @@ const Contact = () => {
 
   return (
 
-    <section id="contacto" className="w-5/6 mx-auto">
+    <section id="contacto" className="bg_contact">
+        <div className="w-5/6 mx-auto ">
+
             <div  className="">
             <h2
             className=" text-center font-black uppercase text-3xl">Contactame
@@ -29,24 +33,25 @@ const Contact = () => {
         <div>
 
 
-            <div className="flex flex-col lg:flex-row justify-around gap-10 lg:gap-20 my-10 lg:my-20 p-2">
+            <div className="flex flex-col lg:flex-row justify-around gap-10 lg:gap-20 my-10 lg:my-14 p-2">
                 
                 <div 
                 className="mt-5">
                     <ul 
                     className="flex text-xl flex-col gap-10">
 
-                        <div className="flex flex-col lg:flex-row gap-4 items-center hover:cursor-default cursor-default hover:text-2xl duration-300 lineal ">
-                            <li className="bg-teal-500 p-3 px-4 rounded-full"></li>
-                            <p className="text-gray-200  ">Córdoba, Argentina</p>
+                        <div className="flex flex-col lg:flex-row gap-4 items-center hover:cursor-default cursor-default ">
+                            <li className="bg-teal-500 p-3 px-4 rounded-full"><FontAwesomeIcon className="" icon={faLocationDot}/></li>
+                            <p className="text-gray-800  hover:text-teal-500 duration-300 lineal">Córdoba, Argentina</p>
                         </div>
                         
                         <div className="">
                             <a href="mailto:tomasaranda2018@gmail.com" className="flex flex-col lg:flex-row gap-4 items-center">
-                                <li className="bg-teal-500 p-3 px-4 rounded-full "></li>
-                                <p className="text-gray-200  text-lg hover:text-teal-500 hover:cursor-pointer duration-300 lineal">tomasaranda2018@gmail.com</p>
+                                <li className="bg-teal-500 p-3 px-4 rounded-full "><FontAwesomeIcon icon={faEnvelope}/></li>
+                                <p className="text-gray-800  text-lg hover:text-teal-500 hover:cursor-pointer duration-300 lineal">tomasaranda2018@gmail.com</p>
                             </a>
                         </div>
+
                     </ul>
                 </div>
                 <div
@@ -178,7 +183,7 @@ const Contact = () => {
                                     rows="10" 
                                     autoComplete="off"
 
-                                    className={`input_contact absolute mt-3 px-3 py-2 outline-none bg-transparent border shadow-sm text-gray-900 border-gray-400 placeholder-slate-400 
+                                    className={`input_contact absolute mt-1 px-3 py-2 outline-none bg-transparent border shadow-sm text-gray-900 border-gray-400 placeholder-slate-400 
                                     focus:outline-none w-full block rounded-md ${errors.mensaje && touched.mensaje ? "focus:border-red-400 border-red-400" : "focus:border-sky-400"} `}
                                     placeholder=' '>
                                 </textarea>
@@ -209,6 +214,7 @@ const Contact = () => {
                 </div>
             </div>
             </div>
+        </div>
 
     </section>
   )
