@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonCV from '../buttons/buttonCV'
+import ButtonCV from '../buttons/Button'
 import './Header.css'
 import Links from './Links'
 
@@ -33,7 +33,7 @@ const Header = () => {
 
             <div className="flex flex-col gap-3 pt-32">
                 <p>Hola! Me llamo</p>
-                <h1 className="text-8xl font-semibold">Tomas Aranda.</h1>
+                <h1 className="text-10xl font-semibold">Tomas Aranda.</h1>
 
                 <p className="text-2xl">Soy Frontend Developer.</p>
             </div>
