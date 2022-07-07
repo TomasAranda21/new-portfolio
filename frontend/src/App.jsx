@@ -13,8 +13,8 @@ function App() {
     
       <Header/>
         <div className=" w-5/6 mx-auto">
-          <Portfolio/>
           <About/>
+          <Portfolio/>
           <Skills/>
           <Contact/>
         </div>
