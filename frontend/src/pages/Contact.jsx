@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Formik } from 'formik'
 import {useState, useEffect, useRef} from 'react'
-import ButtonCV from '../components/buttons/buttonCV';
+import ButtonCV from '../components/buttons/Button';
 import Inputs from '../components/contact/Inputs';
 import MsjError from '../components/contact/MsjError';
 
@@ -19,10 +19,10 @@ const Contact = () => {
 
   return (
 
-    <section id="contacto">
+    <section id="contacto" className="w-5/6 mx-auto">
             <div  className="">
             <h2
-            className="linea text-center md:ml-8 lg:text-left"><span className="text-2xl uppercase text-cyan-500 ">Contactame</span>
+            className=" text-center font-black uppercase text-3xl">Contactame
             </h2>
             </div>
 
@@ -47,12 +47,6 @@ const Contact = () => {
                                 <p className="text-gray-200  text-lg hover:text-teal-500 hover:cursor-pointer duration-300 lineal">tomasaranda2018@gmail.com</p>
                             </a>
                         </div>
-
-                        <div  className="flex flex-col lg:flex-row gap-4 items-center hover:text-2xl hover:cursor-default cursor-default duration-200 lineal">
-                            <li className="bg-teal-500 p-3 px-4 rounded-full"></li>
-                            <p className="text-gray-200">+54 351-763-5317</p>
-                        </div>
-
                     </ul>
                 </div>
                 <div
@@ -184,12 +178,12 @@ const Contact = () => {
                                     rows="10" 
                                     autoComplete="off"
 
-                                    className={`input_contact absolute mt-3 px-3 py-2 outline-none bg-transparent border shadow-sm text-gray-200 border-gray-400 placeholder-slate-400 
+                                    className={`input_contact absolute mt-3 px-3 py-2 outline-none bg-transparent border shadow-sm text-gray-900 border-gray-400 placeholder-slate-400 
                                     focus:outline-none w-full block rounded-md ${errors.mensaje && touched.mensaje ? "focus:border-red-400 border-red-400" : "focus:border-sky-400"} `}
                                     placeholder=' '>
                                 </textarea>
 
-                                <label htmlFor={mensaje} className="label_contact text-gray-100">Mensaje</label>
+                                <label htmlFor={mensaje} className="label_contact text-gray-900">Mensaje</label>
                             </div>
 
 
