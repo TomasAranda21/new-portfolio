@@ -38,7 +38,7 @@
     left: 0;
     width: 0%;
     height: 100%;
-    background-color: #FFC4A9;
+    background-color: #36ADE4;
     transition: all 0.8s;
     z-index: -1;
   }
@@ -51,8 +51,9 @@
 
 
 
+
   .button_filter {
-    --color: #3992e6;
+    --color: #7AE4D9;
     position: relative;
     z-index: 1;
    }
@@ -98,11 +99,12 @@
    .button_filter button {
     padding: 0.7em 2em;
     font-size: 16px;
-    background: #222222;
+    background: #96B1AD;
     color: #fff;
     border: none;
     cursor: pointer;
     font-family: inherit;
+    border-radius: 2px;
    }
 
 
