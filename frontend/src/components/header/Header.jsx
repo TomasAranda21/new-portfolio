@@ -9,7 +9,7 @@ const Header = () => {
   return (
 
 
-    <header className="header_container h-screen">
+    <header className="header_container h-screen  bg-verdeClaro2">
 
         <nav className="w-2/3 mx-auto flex justify-between pt-8 items-center font-fontSecundaria">
 
@@ -29,7 +29,7 @@ const Header = () => {
         </nav>
 
 
-        <section className="flex justify-center text-rojoOscuro">
+        <section className="flex justify-center text-gray-900">
 
             <div className="flex flex-col gap-3 pt-32">
                 <p>Hola! Me llamo</p>
@@ -40,7 +40,9 @@ const Header = () => {
 
         </section>
 
-
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#f9fafb" fillOpacity="1" d="M0,0L48,37.3C96,75,192,149,288,197.3C384,245,480,267,576,266.7C672,267,768,245,864,224C960,203,1056,181,1152,192C1248,203,1344,245,1392,266.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
 
     </header>
         
