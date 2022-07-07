@@ -10,7 +10,7 @@ const Inputs = ({type, name, value ,onChange, onBlur, htmlFor, id, label, error,
                   type={type}
                   id={id}
                   autoComplete="off"
-                  className={`input_contact  absolute mt-1 px-3 py-3 outline-none bg-transparent border shadow-sm text-gray-200 
+                  className={`input_contact  absolute mt-1 px-3 py-3 outline-none bg-transparent border shadow-sm text-gray-900 
                   border-gray-400 placeholder-slate-400 
                   focus:outline-none w-full block rounded-md  ${error && touched ? "focus:border-red-400 border-red-400" : "focus:border-sky-400"} `}
                   
@@ -20,7 +20,7 @@ const Inputs = ({type, name, value ,onChange, onBlur, htmlFor, id, label, error,
                   onBlur={onBlur}
                   value={value}
                   />
-                  <label htmlFor={htmlFor} className="label_contact l text-gray-100">{label}</label>
+                  <label htmlFor={htmlFor} className="label_contact l text-gray-900">{label}</label>
           </div>
       </>
     )
