@@ -5,7 +5,9 @@ import CardsPortfolio from '../components/portfolio/Cards'
 const Portfolio = () => {
   return (
 
-    <section className="mt-10 pb-20 flex flex-col gap-10 w-5/6 mx-auto">
+    <section className="bg_portfolio bg-gray-100">
+
+      <div className=" flex flex-col gap-10 w-4/6 mx-auto ">
 
         <div className="pt-32 text-center flex justify-between items-center">
             <h1 className="text-4xl uppercase font-black">Portfolio</h1>
@@ -22,7 +24,13 @@ const Portfolio = () => {
             <CardsPortfolio/>
             <CardsPortfolio/>
             <CardsPortfolio/>
+            <CardsPortfolio/>
+            <CardsPortfolio/>
         </div>
+
+
+      </div>
+
 
     </section>
   )
