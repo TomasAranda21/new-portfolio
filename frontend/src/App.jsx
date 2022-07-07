@@ -4,6 +4,9 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 import Portfolio from './pages/Portfolio'
 import Skills from './pages/Skills'
+import Footer from './components/footer/Footer'
+import DivLeft from './components/aside/DivLeft'
+import DivRight from './components/aside/DivRight'
 
 function App() {
 
@@ -12,12 +15,14 @@ function App() {
     <>
     
       <Header/>
-        <div className=" w-5/6 mx-auto">
           <About/>
           <Portfolio/>
           <Skills/>
           <Contact/>
-        </div>
+
+          <DivLeft/>
+          <DivRight/>
+        <Footer/>
     
     
     
