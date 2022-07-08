@@ -9,7 +9,7 @@ const Portfolio = () => {
 
       <div className=" flex flex-col gap-10 w-4/6 mx-auto ">
 
-        <div className="pt-32 text-center flex justify-between items-center">
+        <div className="pt-32 text-center flex flex-col gap-6 lg:flex-row lg:gap-0 justify-between items-center">
             <h1 className="text-4xl uppercase font-black">Portfolio</h1>
             <div className='flex gap-10 justify-end '>
               <ButtonFilter text='All'/>
