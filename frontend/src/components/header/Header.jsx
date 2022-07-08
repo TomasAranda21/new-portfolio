@@ -24,7 +24,22 @@ const Header = () => {
 
             </div>
 
-            <ButtonCV text="descargar cv"/>
+            <div className="flex items-center gap-10">
+
+
+                <label className="switch">
+                    <input type="checkbox"/>
+                    <span className="slider"></span>
+                </label>
+                
+                <div className="w-44 relative h-14">
+                    <div className="absolute ">
+
+                        <ButtonCV text="descargar cv"/>
+                        
+                    </div>
+                </div>
+            </div>
 
         </nav>
 
@@ -32,10 +47,10 @@ const Header = () => {
         <section className="flex justify-center text-gray-900">
 
             <div className="flex flex-col gap-3 pt-32">
-                <p>Hola! Me llamo</p>
-                <h1 className="text-10xl font-semibold">Tomas Aranda.</h1>
+                <p className="text-3xl ml-10 font-semibold">Hola! Me llamo</p>
+                <h1 className="text-11xl font-bold">Tomas Aranda.</h1>
 
-                <p className="text-2xl">Soy Frontend Developer.</p>
+                <p className="text-4xl text-right mr-4 font-semibold">Soy Frontend Developer.</p>
             </div>
 
         </section>

@@ -197,10 +197,13 @@ const Contact = () => {
                             </div>
                         </div>
 
-                            <ButtonCV
-                            text="Enviar"
-                            type="submit"
-                            />
+                            <div className="h-3 w-full">
+                                <ButtonCV
+                                text="Enviar"
+                                type="submit"
+                                />
+
+                            </div>
 
 
                         {mensaje.msg && <div className="text-white text-center text-xl">{mensaje.msg}</div>}
