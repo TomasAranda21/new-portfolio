@@ -1,3 +1,7 @@
+import backend from '../../assets/backend2.png'
+// import frontend from '../../assets/web-design.png'
+import frontend from '../../assets/frontend2.png'
+
 const ObjSkill = [
 
     {   
@@ -11,6 +15,10 @@ const ObjSkill = [
             "Bootstrap",
             "Tailwind"
         ],
+
+        img: frontend,
+
+
         id: 1,
         
     },
@@ -23,6 +31,8 @@ const ObjSkill = [
             "Firebase",
             "Git"
         ],
+
+        img: backend,
         
         id: 2
         
