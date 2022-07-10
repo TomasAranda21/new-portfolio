@@ -1,56 +1,56 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ButtonCV from '../buttons/Button'
 import './Header.css'
 import Links from './Links'
+import NavDesktop from './NavDesktop'
+import NavMovile from './NavMovile'
 
 
 const Header = () => {
 
+    const [isMovil, setIsMovil] = useState(false)
+
+
+    useEffect(() => {
+
+        if(window.screen.width <= 768) {
+
+            setIsMovil(true)
+
+        }
+
+
+    }, [])
+
   return (
 
 
-    <header className="header_container h-screen  bg-verdeClaro2">
+    <header className="header_container lg:h-screen bg-verdeClaro2">
 
-        <nav className="w-2/3 mx-auto flex justify-between pt-8 items-center font-fontSecundaria">
+        {!isMovil ?
 
-            <Links text='T/A'/>
+            <NavDesktop/>
 
+        : <NavMovile/>
 
-            <div>
-                <Links text='Inicio'/>
-                <Links text='Portfolio'/>
-                <Links text='Skills'/>
-                <Links text='Contacto'/>
-
-            </div>
-
-            <div className="flex items-center gap-10">
+    
+        }
 
 
-                <label className="switch">
-                    <input type="checkbox"/>
-                    <span className="slider"></span>
-                </label>
-                
-                <div className="w-44 relative h-14">
-                    <div className="absolute ">
 
-                        <ButtonCV text="descargar cv"/>
-                        
-                    </div>
+
+        <section className="flex justify-center text-gray-900 pb-44 lg:pb-20">
+
+            <div className="flex flex-col gap-3 pt-20 lg:pt-32  ">
+                <p className="text-2xl lg:text-4xl font-semibold text-center lg:text-left">Hola!👋🏻  Me llamo</p>
+                <h1 className="xl:text-11xl text-5xl font-bold">Tomas Aranda.</h1>
+
+                <div className="relative pb-20 lg:left-1/2 w-full">
+
+                    <p className="borderText spanText">Soy Frontend Developer.</p>
+                    <p className="wave spanText">Soy Frontend Developer.</p>
+
                 </div>
-            </div>
-
-        </nav>
-
-
-        <section className="flex justify-center text-gray-900">
-
-            <div className="flex flex-col gap-3 pt-32">
-                <p className="text-3xl ml-10 font-semibold">Hola! Me llamo</p>
-                <h1 className="text-11xl font-bold">Tomas Aranda.</h1>
-
-                <p className="text-4xl text-right mr-4 font-semibold">Soy Frontend Developer.</p>
             </div>
 
         </section>
