@@ -1,10 +1,15 @@
 import React from 'react'
 
-const ButtonSkills = ({text}) => {
+const ButtonSkills = ({text, onClick, education}) => {
 
   return (
 
-    <button className='px-10 p-3 border-2 rounded-lg  text-white font-bold focus:bg-naraja'>{text}</button>
+    <button onClick={onClick}
+    
+    className={`px-10 p-3 border-2 rounded-lg text-gray-800 font-bold focus:bg-naraja focus:text-white`}
+    
+    
+    >{text}</button>
 
   )
 
