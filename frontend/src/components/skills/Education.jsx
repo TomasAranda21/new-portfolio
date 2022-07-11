@@ -4,13 +4,30 @@ const Education = () => {
 
   return (
 
-    <div className="shadow-sm border p-3 rounded-sm flex flex-col gap-2 text-sm">
-        <h3 className="text-center uppercase">Curso JavaScript</h3>
-        <p className="">Institucion: <span>Udemy</span></p>
-        <p className=" ">Nombre: <span>JavaScript Moderno Guía Definitiva Construye +15 Proyectos</span></p>
-        <p>Fecha: <span className="capitalize">Octubre 2021 a Febrero 2022</span></p>
+    <div className="shadow-sm border rounded-sm flex text-base border-violet-400 absolute">
 
-        <a href="" className="flex justify-end">Link de la credencial</a>
+      <div className="bg-sky-800 p-4 text-gray-50 font-bold">
+          <p></p>
+          <p className="text-center text-xl">Curso JavaScript</p>
+      </div>
+
+      <div className="p-4 bg-gray-50 flex flex-col gap-2">
+          <p className="font-semibold">Institucion: <span className="font-normal">Udemy</span></p>
+
+          <p className=" font-semibold">Nombre: <span className="font-normal">JavaScript Moderno Guía Definitiva Construye +15 Proyectos</span></p>
+
+          <p className=" font-semibold">Fecha: <span className="capitalize font-normal">Octubre 2021 a Febrero 2022</span></p>
+
+          <div className="flex justify-end mt-2">
+            <a href="" 
+            className="border px-4 py-1
+            bg-gray-900 text-white font-semibold rounded-md">
+              
+              Link de credencial</a>
+          </div>
+      </div>
+
+
     </div>
 
 
