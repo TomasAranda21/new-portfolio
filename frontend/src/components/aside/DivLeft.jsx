@@ -9,8 +9,8 @@ const DivLeft = () => {
         <div className="fixed w-1/6 left-0 bottom-0">
             
             <div 
-                className="text-xl md:flex md:flex-col md:items-center text-gray-800 mr-20">
-                    <div className='border border-l-3 rotate-90 w-20 mb-16 border-gray-400'></div>
+                className="text-xl md:flex md:flex-col md:items-center text-gray-800 dark:text-gray-50 mr-20">
+                    <div className='border border-l-3 rotate-90 w-20 mb-16 border-gray-400 dark:text-gray-50'></div>
                         
                     <ul className="flex flex-col gap-8 items-center">
                         <a target="_blank" href="https://www.linkedin.com/in/tomas--aranda" ><li className="hover:text-cyan-500 hover:text-2xl ease-in-out duration-200"><FontAwesomeIcon icon={faLinkedinIn}/></li></a>
@@ -18,7 +18,7 @@ const DivLeft = () => {
                         <a target="_blank" href="https://www.instagram.com/tomas_aranda24/?utm_medium=copy_link"><li className="hover:text-cyan-500 hover:text-2xl ease-in-out duration-200"><FontAwesomeIcon icon={faInstagram}/></li></a>
                     </ul>
 
-                <div className='border border-l-3 rotate-90 w-16 mt-16 mb-10 border-gray-400'></div>
+                <div className='border border-l-3 rotate-90 w-16 mt-16 mb-10 border-gray-400 dark:text-gray-50'></div>
             </div>
         </div>
     </div>
