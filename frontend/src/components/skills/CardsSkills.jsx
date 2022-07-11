@@ -4,9 +4,9 @@ const CardsSkills = ({text, children}) => {
 
   return (
 
-    <div className=" shadow-xl rounded-md text-gray-800 px-8 py-3 border">
+    <div className=" hover:shadow-2xl rounded-md text-gray-800 px-8 py-3 border cursor-pointer hover:bg-amarillo duration-300">
         <div className="text-2xl">
-            <h2>{text}</h2>
+            <h2 className="font-semibold">{text}</h2>
         </div>
 
         <div 
