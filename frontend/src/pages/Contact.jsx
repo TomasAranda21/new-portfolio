@@ -21,7 +21,7 @@ const Contact = () => {
 
   return (
 
-    <section id="contacto" className="bg_contact">
+    <section id="contacto" className="bg_contact bg-slate-100 py-5">
         <div className="w-5/6 mx-auto ">
 
             <div  className="">
@@ -35,25 +35,6 @@ const Contact = () => {
 
             <div className="flex flex-col lg:flex-row justify-around gap-10 lg:gap-20 my-10 lg:my-14 p-2">
                 
-                <div 
-                className="mt-5">
-                    <ul 
-                    className="flex text-xl flex-col gap-10">
-
-                        <div className="flex flex-col lg:flex-row gap-4 items-center hover:cursor-default cursor-default ">
-                            <li className="bg-teal-500 p-3 px-4 rounded-full"><FontAwesomeIcon className="" icon={faLocationDot}/></li>
-                            <p className="text-gray-800  hover:text-teal-500 duration-300 lineal">Córdoba, Argentina</p>
-                        </div>
-                        
-                        <div className="">
-                            <a href="mailto:tomasaranda2018@gmail.com" className="flex flex-col lg:flex-row gap-4 items-center">
-                                <li className="bg-teal-500 p-3 px-4 rounded-full "><FontAwesomeIcon icon={faEnvelope}/></li>
-                                <p className="text-gray-800  text-lg hover:text-teal-500 hover:cursor-pointer duration-300 lineal">tomasaranda2018@gmail.com</p>
-                            </a>
-                        </div>
-
-                    </ul>
-                </div>
                 <div
                 className="w-full xl:w-1/3 lg:w-1/2">
 
