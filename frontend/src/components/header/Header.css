@@ -72,6 +72,14 @@
   }
 }
 
+@media (max-width: 360px) {
+  .spanText{
+    font-size: 1.4rem;
+    left: 10%;
+   
+  }
+}
+
 
 
 

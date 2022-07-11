@@ -1,42 +1,61 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ButtonCV from '../buttons/Button'
 import './Header.css'
 import Links from './Links'
+import moon from '../../assets/moon.png'
+import sun from '../../assets/sun.png'
 
-const NavDesktop = () => {
+const NavDesktop = ({dark, isDark}) => {
+
 
   return (
     <>
-        <nav className="w-2/3 flex mx-auto justify-between pt-8 items-center font-fontSecundaria">
+        <div className="fixed w-full px-7 2xl:px-0 z-50 bg-verdeClaro2">
+            <nav className="2xl:w-2/3 w-full flex mx-auto justify-between py-5 items-center font-fontSecundaria ">
 
-        <Links text='T/A'/>
-
-
-            <div>
-                <Links text='Inicio'/>
-                <Links text='Portfolio'/>
-                <Links text='Skills'/>
-                <Links text='Contacto'/>
-
-            </div>
-
-            <div className="flex items-center gap-10">
+                <Links text='T/A' nav="home"/>
 
 
-                <label className="switch">
-                    <input type="checkbox"/>
-                    <span className="slider"></span>
-                </label>
-                
-                <div className="w-44 relative h-14">
-                    <div className="absolute ">
+                    <div>
+                        <Links text='Inicio' nav="home"/>
+                        <Links text='Portfolio' nav="portfolio"/>
+                        <Links text='Skills' nav="skills"/>
+                        <Links text='Contacto' nav="contacto"/>
 
-                        <ButtonCV text="descargar cv"/>
-                        
                     </div>
+
+                    <div className="flex items-center gap-10">
+
+
+                        {/* <label className="switch">
+                            <input type="checkbox"/>
+                            <span className="slider"></span>
+                        </label> */}
+                        <div className="">
+                            {dark ? 
+
+                            <button onClick={e => isDark(false)}><img src={sun} alt="" width="30"/></button> 
+
+                            :
+
+                            
+                            <button onClick={e => isDark(true)}><img src={moon} alt="" width="30"/></button> 
+
+                            }
+                        </div>
+                        
+                        <div className="w-44 relative h-14">
+                            <div className="absolute ">
+
+                                <ButtonCV text="descargar cv"/>
+                                
+                            </div>
+                        </div>
                 </div>
+
+            </nav>
+
         </div>
-        </nav>
     </>
   )
 }

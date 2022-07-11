@@ -1,35 +1,70 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faBars, faBriefcase, faCode , faEnvelope, faHome, faArrowRightFromBracket} from '@fortawesome/free-solid-svg-icons'
+import {faBars, faBriefcase, faCode , faEnvelope, faHome, faArrowRightFromBracket, faMoon, faSun} from '@fortawesome/free-solid-svg-icons'
 import ButtonCV from '../buttons/Button'
+import moon from '../../assets/moon.png'
+import sun from '../../assets/sun.png'
 import './Header.css'
 import Links from './Links'
 
 
-const NavMovile = () => {
+const NavMovile = ({dark, isDark}) => {
+
+    const [nav, setNav] = useState(false)
+
+
 
   return (
 
     <> 
-        <div className="relative top-0">
-            <nav className="flex justify-between pt-8 p-3 items-center">
+        <div className="fixed top-0 w-full z-50 bg-verdeClaro2" >
+            <nav className=" flex justify-between pt-4 p-3 items-center">
 
-                <Links text='T/A'/>
+                <Links text='T/A' nav="home"/>
 
-                <FontAwesomeIcon icon={faBars} className="text-2xl" width="40"/>
+                <FontAwesomeIcon onClick={() => setNav(true)} icon={faBars} className="text-2xl" width="40"/>
 
                 
 
+                {nav && 
+                    <div className="fixed bg-verdeClaro4 py-10 top-0 w-1/2 h-screen right-0 z-30 ">
 
-                {/* <div className="fixed bg-verdeClaro4 p-20 top-0 w-1/3 h-screen right-0 z-30 ">
-                    <div className="flex flex-col gap-10 items-center pt-20">
-                        <a href="">Inicio</a>
-                        <a href="">Portfolio</a>
-                        <a href="">Skills</a>
-                        <a href="">Contacto</a>
+                        <div className="px-10 flex justify-between items-center">
+                            <button className="uppercase text-3xl font-bold flex justify-start" onClick={() => setNav(false)}>X</button>
 
+
+                            <div className="">
+                                {dark ? 
+
+                                <button onClick={e => isDark(false)}><img src={sun} alt="" width="30"/></button> 
+
+                                :
+
+                                
+                                <button onClick={e => isDark(true)}><img src={moon} alt="" width="30"/></button> 
+
+                                }
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col gap-5 items-center pt-20 text-xs">
+
+                        <Links text='Inicio' nav="home"/>
+                        <Links text='Portfolio' nav="portfolio"/>
+                        <Links text='Skills' nav="skills"/>
+                        <Links text='Contacto' nav="contacto"/>
+                           
+                            
+                            <div className="px-5">
+
+                                <ButtonCV text="descargar cv"/>
+                            </div>
+
+                        </div>
+
+                        
                     </div>
-                </div> */}
+                }
 
             </nav>
 
