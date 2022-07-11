@@ -5,6 +5,7 @@ module.exports = {
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
    
     extend: {
@@ -20,7 +21,12 @@ module.exports = {
         verdeClaro: "#7AE4D9",
         
         grisAzulado: "96B1AD",
-        
+
+        naranja: "#FFB152",
+        azulClaro: "#59B3FF",
+
+        darkMode1: "#394855",
+        darkMode2: "#2C2F32",
         
         
         verdeClaro1: "#7EECCB",
@@ -42,6 +48,7 @@ module.exports = {
       },
 
       fontSize: {
+        '11xl': '10rem',
         '10xl': '13rem',
       }
     },
