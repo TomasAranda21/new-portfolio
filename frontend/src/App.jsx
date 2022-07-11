@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Header from './components/header/Header'
 import Contact from './pages/Contact'
 import About from './pages/About'
@@ -10,19 +10,37 @@ import DivRight from './components/aside/DivRight'
 
 function App() {
 
+  const [dark, isDark] = useState(false)
+
+  useEffect(() => {
+
+    if (dark === true) {
+
+      document.documentElement.classList.add('dark')
+
+      console.log("Modo dark")
+    } else {
+
+      document.documentElement.classList.remove('dark')
+      console.log("Modo light")
+    }
+
+  }, [dark])
+
   return (
 
     <>
     
-      <Header/>
-          <About/>
-          <Portfolio/>
-          <Skills/>
-          <Contact/>
+      <Header dark={dark} isDark={isDark}/>
+          <About dark={dark}/>
+          <Portfolio dark={dark}/>
+          <Skills dark={dark}/>
+          <Contact dark={dark}/>
 
           <DivLeft/>
           <DivRight/>
-        <Footer/>
+
+        <Footer dark={dark}/>
     
     
     
