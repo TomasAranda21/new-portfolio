@@ -90,22 +90,16 @@ const Contact = () => {
                 }}
 
                 onSubmit={async (values, {resetForm}) => {
-                    // const url = `${import.meta.env.VITE_BACKEND_URL}`
+                    const url = `${import.meta.env.VITE_BACKEND_URL}`
                     
-                    // const config = {
-                    //     headers: {
-                    //         "Content-Type": "application/json"
-                    //     }
-                    // }
-              
-                    // await axios.post(url, values)
+                    await axios.post(url, values)
                     
-                    // setMensaje({
-                    //     msg: '¡Tu mensaje ha sido recibido con exito!'
-                    // })
-                    // setTimeout(() => {
-                    //     setMensaje({})
-                    // }, 4000)
+                    setMensaje({
+                        msg: '¡Tu mensaje ha sido recibido con exito!'
+                    })
+                    setTimeout(() => {
+                        setMensaje({})
+                    }, 4000)
 
                     console.log(values)
 
