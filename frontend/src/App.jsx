@@ -8,9 +8,48 @@ import Footer from './components/footer/Footer'
 import DivLeft from './components/aside/DivLeft'
 import DivRight from './components/aside/DivRight'
 
+
+import { collection, addDoc, getDocs, doc,onSnapshot,  } from "firebase/firestore";
+import {db} from './Firebase'
+
+
 function App() {
 
   const [dark, isDark] = useState(false)
+
+  const [experiencia, setExperiencia] = useState([])
+  
+  const [proyects, setProyects] = useState([])
+  
+  const [skills, setSkills] = useState([])
+
+  useEffect(() => {
+
+    const getUser = onSnapshot(
+        collection(db, "user"),
+        (snapShot) => {
+          let list = [];
+          snapShot.docs.forEach((doc) => {
+            list.push({ id: doc.id, ...doc.data() });
+          });
+            
+          setExperiencia(list[0].experiencia)
+          setProyects(list[0].proyects)
+          setSkills(list[0].skills)
+        },
+
+        (error) => {
+          console.log(error);
+        }
+      );
+  
+      return () => {
+
+        getUser();
+
+      };
+}, [])
+
 
   useEffect(() => {
 
@@ -33,8 +72,8 @@ function App() {
     
       <Header dark={dark} isDark={isDark}/>
           <About dark={dark}/>
-          <Portfolio dark={dark}/>
-          <Skills dark={dark}/>
+          <Portfolio proyects={proyects} dark={dark}/>
+          <Skills experiencia={experiencia} skills={skills} dark={dark}/>
           <Contact dark={dark}/>
 
           <DivLeft/>
