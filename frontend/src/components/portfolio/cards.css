@@ -27,17 +27,16 @@
 
 
 }
-
 .cards:hover:before{
 
-    background: rgb(221, 122, 122);
+    background: #FA8D74;
     left: 140px;
     top: 100px;
 }
 
 .cards:hover:after{
 
-    background: rgb(90, 75, 131);
+    background: #7EECCB; 
     right: 140px;
     bottom: 100px;
 }

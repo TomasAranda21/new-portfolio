@@ -1,19 +1,23 @@
 import React from 'react'
 import './cards.css'
 
-const CardsPortfolio = () => {
+const CardsPortfolio = ({img, name, description, linkWeb, linkGit}) => {
   return (
 
     <div className="relative overflow-hidden rounded-md shadow-xl ">
 
     <div className="cards">
+  
         <img className=""
         
-        src="https://res.cloudinary.com/dj1pp4ivb/image/upload/v1657248126/prueba3_qpsdck.png" alt="" width={300}/>
+        src={img} alt="" width={300}/>
 
         <div className="info_container">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h1>{name}</h1>
+            <p>{description}</p>
             <p>Link</p>
+            <a href={linkWeb} target="_blank" > Link web</a>
+            <a href={linkGit} target="_blank" > Codigo </a>
         </div>
 
     </div>
