@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import ButtonSkills from '../components/buttons/ButtonSkills'
-import ObjExp from '../components/objJson/ObjExp'
-import ObjSkill from '../components/objJson/skills'
 import CardsSkills from '../components/skills/CardsSkills'
 import CarouselSkills from '../components/skills/CarouselSkills'
 import Education from '../components/skills/Education'
@@ -9,7 +7,7 @@ import Experiencia from '../components/skills/Experiencia'
 import HardSkills from '../components/skills/HardSkills'
 import MisSkills from '../components/skills/MisSkills'
 
-const Skills = ({dark}) => {
+const Skills = ({dark, experiencia, skills}) => {
 
 
   const [isEducation, setIsEducation] = useState(false)
@@ -34,7 +32,7 @@ const Skills = ({dark}) => {
 
           <div className="py-3">
 
-            <MisSkills/>
+            <MisSkills skills={skills}/>
 
           </div>
         
@@ -61,11 +59,11 @@ const Skills = ({dark}) => {
           {!isEducation ? 
           <div className="flex justify-center gap-8 flex-wrap">
 
-          {ObjExp.map(exp => (
+          {experiencia?.map(exp => (
 
-            <div key={exp.id} className="">
+            <div key={exp.name} className="">
 
-              <Experiencia date={exp.date} title={exp.title} description={exp.description} client={exp.client} link={exp.link}/>
+              <Experiencia date={exp.date} title={exp.name} description={exp.description} client={exp.client} link={exp.link}/>
 
             </div>
 

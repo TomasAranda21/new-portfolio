@@ -2,7 +2,7 @@ import React from 'react'
 import ButtonFilter from '../components/buttons/ButtonFilter'
 import CardsPortfolio from '../components/portfolio/Cards'
 
-const Portfolio = ({dark}) => {
+const Portfolio = ({dark, proyects}) => {
   return (
 
     <section className="bg_portfolio bg-gray-100 dark:bg-slate-700" id="portfolio">
@@ -24,12 +24,15 @@ const Portfolio = ({dark}) => {
 
 
         <div className="flex justify-center gap-10 flex-wrap my-10">
-            <CardsPortfolio/>
-            <CardsPortfolio/>
-            <CardsPortfolio/>
-            <CardsPortfolio/>
-            <CardsPortfolio/>
-            <CardsPortfolio/>
+          {proyects?.map(proy => (
+            
+            <div key={proy.name}>
+              <CardsPortfolio img={proy.img} name={proy.name} description={proy.description} linkWeb={proy.linkWeb} linkGit={proy.linkGit}/>
+
+            </div>
+
+          ))}
+    
         </div>
 
 
