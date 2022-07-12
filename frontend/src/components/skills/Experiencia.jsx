@@ -25,7 +25,7 @@ const Experiencia = ({date, title, description, client, link}) => {
                 <p><span className="font-bold">Cliente: </span>{client}</p>
                 <p><span className="font-bold">Fecha:  </span>{date}</p>
 
-                <a href={link} className="text-center cursor-pointer px-3 py-1 border-gray-900
+                <a href={link} target="_blank" className="text-center cursor-pointer px-3 py-1 border-gray-900
                 hover:bg-verdeClaro2 duration-200 border rounded-sm"><FontAwesomeIcon icon={faArrowUpRightFromSquare}/> Link de la app </a>
 
             </div>

@@ -1,9 +1,13 @@
 import React from 'react'
-import ObjSkill from '../objJson/skills'
 import CardsSkills from './CardsSkills'
 import HardSkills from './HardSkills'
 
-const MisSkills = () => {
+import backend from '../../assets/backend2.png'
+import frontend from '../../assets/frontend2.png'
+
+const MisSkills = ({skills}) => {
+
+    console.log(skills.map(s => console.log(s.skills)))
   return (
     <>
         <h3 className="text-2xl font-medium text-center mt-5">Mis Skills</h3>
@@ -11,26 +15,25 @@ const MisSkills = () => {
         <div
         className='flex gap-2 items-center lg:flex-row lg:gap-10 text-center mt-5 md:justify-between mb-20 lg:mb-0'
         >
-            {ObjSkill.map(skil => (
+            {skills.map(skil => (
                 
-             <div className="container_cards " key={skil.id}>
+             <div className="container_cards " key={skil.type}>
                 <div className="card_logo_title bg-gradient-to-t from-verdeClaro2 to-azulClaro">
                     <p className="font-bold text-2xl">{skil.type}</p>
 
                     <div className=" overflow-hidden h-32 w-20 mx-auto">
-                        <img className="object-cover" src={skil.img} alt=""  width={120}/>
+                        <img className="object-cover" src={skil.type === 'frontend' ? frontend : backend } alt=""  width={120}/>
 
                     </div>
                 </div>  
 
                 <div className="card_text">
 
-                {skil.skills.map(text => (
+                {skil?.skill?.map(text => (
                     <div key={text} className="">
+
                         <HardSkills
-
-                        text={text}
-
+                            text={text}
                         />
 
                     </div>
