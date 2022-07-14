@@ -47,7 +47,9 @@ const NavDesktop = ({dark, isDark}) => {
                         <div className="w-44 relative h-14">
                             <div className="absolute ">
 
-                                <ButtonCV text="descargar cv"/>
+                            <a target="_blank" href="https://drive.google.com/file/d/1YVsHxjlzsqtcL1OiGve8F7mkfVRIKHmS/view">
+                                    <ButtonCV text="descargar cv"/>
+                            </a>
                                 
                             </div>
                         </div>
