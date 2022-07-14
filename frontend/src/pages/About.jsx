@@ -17,7 +17,9 @@ const About = ({dark}) => {
             
             <p>Lo próximo que quiero en mi vida es tener una oportunidad laboral en el que pueda colaborar con mis conocimientos, además me gustaría mucho poder compartir con otras personas y aprender de ellas para poder seguir creciendo como persona y como profesional.</p>
           
+            <a target="_blank" href="https://drive.google.com/file/d/1YVsHxjlzsqtcL1OiGve8F7mkfVRIKHmS/view">
             <ButtonAbout text="Descargar CV"/>
+             </a>
 
           </div>
 
