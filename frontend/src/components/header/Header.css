@@ -1,9 +1,7 @@
 .header_container{
 
-    /* background-color: #FFEFAE; */
-    /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1800' height='1000' preserveAspectRatio='none' viewBox='0 0 1800 1000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1050%26quot%3b)' fill='none'%3e%3crect width='1800' height='1000' x='0' y='0' fill='rgba(255%2c 239%2c 174%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c913 C 120%2c825.4 360%2c491.2 600%2c475 C 840%2c458.8 960%2c827.4 1200%2c832 C 1440%2c836.6 1680%2c564.8 1800%2c498L1800 1000L0 1000z' fill='rgba(150%2c 177%2c 173%2c 0.12)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1050'%3e%3crect width='1800' height='1000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e"); */
-    background-repeat: no-repeat;
-    background-size:cover;
+  background-repeat: no-repeat;
+  background-size:cover;
 
 }
 
@@ -64,7 +62,15 @@
   }
 }
 
-@media (max-width: 1444px) {
+@media (max-width: 1279px) {
+  .spanText{
+    font-size: 2rem;
+    left: 10%;
+   
+  }
+}
+
+@media (max-width: 767px) {
   .spanText{
     font-size: 1.6rem;
     left: 10%;
@@ -80,8 +86,22 @@
   }
 }
 
+.nav_hidden{
+  right: -1500px;
+  position: fixed;
+  padding: 20px 0px;;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  z-index: 999;
+  background: #AEF89F;
 
+  transition: all 0.6s ease-in-out;
+}
 
+.nav_desktop_hidden{
+  top: -200px;
+}
 
 
 .nav_link {
