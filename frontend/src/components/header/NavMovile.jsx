@@ -1,37 +1,54 @@
-import React, { useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faBars, faBriefcase, faCode , faEnvelope, faHome, faArrowRightFromBracket, faMoon, faSun} from '@fortawesome/free-solid-svg-icons'
+import {faBars, faBriefcase, faCode , faEnvelope, faHome, faXmark} from '@fortawesome/free-solid-svg-icons'
 import ButtonCV from '../buttons/Button'
-import moon from '../../assets/moon.png'
-import sun from '../../assets/sun.png'
 import './Header.css'
 import Links from './Links'
 import LinksMovile from './LinksMovile'
+import { useInView } from 'react-intersection-observer'
 
 
 const NavMovile = ({dark, isDark}) => {
 
     const [nav, setNav] = useState(false)
 
+    const {ref, inView } = useInView();
+
+
+    const navRef = useRef()
+
+    useEffect(() => {
+
+        if(nav) {
+            navRef.current.classList.add('right-0')
+
+        }else{
+
+            navRef.current.classList.remove('right-0')
+        }
+
+    }, [nav])
+
+
 
   return (
-
     <> 
-        <div className="fixed top-0 w-full z-50 bg-verdeClaro2" >
-            <nav className=" flex justify-between pt-4 p-3 items-center">
+        <div className="fixed top-0 w-full z-50 bg-verdeClaro2"ref={ref} >
+            <nav className={`${inView ?  "flex justify-between pt-4 p-3 lg:px-10 items-center relative bottom-0 delay-700 duration-700 ease-in-out " : "flex justify-between pt-4 p-3 items-center relative bottom-96"} `}>
 
-                <Links text='T/A' nav="home"/>
+
+                <Links text={'T/A'} className="font-bold text-xl" nav="home"/>
+                
 
                 <FontAwesomeIcon onClick={() => setNav(true)} icon={faBars} className="text-2xl" width="40"/>
 
-                {nav && 
-                    <div className="fixed bg-verdeClaro3 py-10 top-0 w-1/2 h-screen right-0 z-30 ">
+                    <div ref={navRef} className="nav_hidden">
+ 
+                        <div className="px-5">
+                            <button className="uppercase text-3xl font-bold" onClick={() => setNav(false)}><FontAwesomeIcon icon={faXmark}/></button>
 
-                        <div className="px-10 flex justify-between items-center">
-                            <button className="uppercase text-3xl font-bold flex justify-start" onClick={() => setNav(false)}>X</button>
 
-
-                            <div className="">
+                            {/* <div className="">
                                 {dark ? 
 
                                 <button onClick={e => isDark(false)}><img src={sun} alt="" width="30"/></button> 
@@ -42,7 +59,7 @@ const NavMovile = ({dark, isDark}) => {
                                 <button onClick={e => isDark(true)}><img src={moon} alt="" width="30"/></button> 
 
                                 }
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className="flex flex-col gap-8 items-center pt-20 text-xs">
@@ -52,7 +69,7 @@ const NavMovile = ({dark, isDark}) => {
                             <LinksMovile nav={"skills"} text={"Skills"} onClick={() => setNav(false)} icon={faCode}/>
                             <LinksMovile nav={"contacto"} text={"Contacto"} onClick={() => setNav(false)} icon={faEnvelope}/>
 
-                            <div className="px-5">
+                            <div className="px-5 mt-8">
                                 <a target="_blank" href="https://drive.google.com/file/d/1YVsHxjlzsqtcL1OiGve8F7mkfVRIKHmS/view">
                                     <ButtonCV text="descargar cv"/>
                                 </a>
@@ -60,7 +77,6 @@ const NavMovile = ({dark, isDark}) => {
 
                         </div>
                     </div>
-                }
 
             </nav>
 
