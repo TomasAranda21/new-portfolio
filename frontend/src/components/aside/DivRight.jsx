@@ -5,11 +5,6 @@ const DivRight = () => {
 
     const {ref, inView } = useInView({triggerOnce: true});
 
-    useEffect(() => {
-        console.log(ref)
-    }, [inView])
-
-
   return (
     <div  className="w-full m-0 p-0 text-2xl  hidden 2xl:block">
 
