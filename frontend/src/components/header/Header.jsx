@@ -44,7 +44,7 @@ const Header = ({dark, isDark}) => {
             <div className="flex flex-col gap-3 pt-20 lg:pt-40 "  ref={refHello}>
                 <div className={helloView ? `relative bottom-0 opacity-100 delay-300 duration-700 ease-in-out ` : 'relative bottom-96 opacity-0 duration-700 ease-in-out'} >
                     <p className="text-2xl md:text-4xl font-semibold text-center lg:text-left">Hola!👋🏻  Me llamo</p>
-                    <h1 className="xl:text-11xl md:text-7xl text-5xl text-center font-bold my-5">Tomás Aranda.</h1>
+                    <h1 className="xl:text-10xl md:text-7xl text-5xl text-center font-bold my-5">Tomás Aranda.</h1>
                 </div>
                 
                 <div className={nameView ? `relative top-0 flex justify-end opacity-100 pb-20 delay-500 duration-700 ease-in-out` : 'relative  top-64 opacity-0 duration-700 ease-in-out'} ref={refName}>
