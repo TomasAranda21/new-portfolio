@@ -43,13 +43,12 @@ module.exports = {
       fontFamily: {
         fontPrincipal: ['Inter', 'sans-serif'],
         fontSecundaria: ['Fira Code', 'monospace'],
-        fontTitles: ['Mulish', 'sans-serif'],
 
       },
 
       fontSize: {
-        '11xl': '10rem',
-        '10xl': '13rem',
+        '11xl': '13rem',
+        '10xl': '10rem',
       }
     },
   },
