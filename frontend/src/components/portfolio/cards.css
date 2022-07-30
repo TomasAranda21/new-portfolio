@@ -47,14 +47,11 @@
 
 @media (min-width: 1500px) {
     .cards:hover:after{
-
         right: 110px;
         bottom: 100px;
-
     }
 
     .cards:hover:before{
-
         left: 110px;
         top: 100px;
     }

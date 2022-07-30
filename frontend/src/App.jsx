@@ -36,7 +36,7 @@ function App() {
       
       setLoading(false)
       
-    }, 1500)
+    }, 500)
     
     
     const getUser = onSnapshot(
@@ -80,7 +80,7 @@ function App() {
 
       }, [dark])
       
-      // if(loading) return <LoadingPage/>
+      if(loading) return <LoadingPage/>
 
 
 

@@ -27,3 +27,67 @@
     background-repeat: no-repeat;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1000' height='700' preserveAspectRatio='none' viewBox='0 0 1000 700'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1027%26quot%3b)' fill='none'%3e%3cpath d='M924.69-68.19C746.35-6.77 707.69 510.95 450.83 518.93 193.97 526.91 104.46 333.37-23.03 329.93' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M533.99-27.68C409.9 17.67 381.27 385.94 209.21 389.21 37.15 392.48-21.87 206.92-115.57 200.21' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M836.8-92.71C721.53-43.18 712.94 306.86 547.77 317.55 382.59 328.24 403.25 230.05 258.73 230.05 114.22 230.05 45.19 316.6-30.3 317.55' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M719.51-37.73C583.24 76.27 630.57 568.71 435.65 613.79 240.73 658.87 293.73 526.29 151.8 526.29 9.87 526.29-57.81 612.8-132.06 613.79' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M614.32-45.49C524.35-20.9 601.28 193.67 361.65 228.99 122.01 264.31 6.39 543.92-143.7 557.99' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1027'%3e%3crect width='1000' height='700' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
 }
+
+
+.slick-slide > div{
+    margin: 0 10px;
+
+}
+
+.slick-list {
+    margin: 0 -10px
+}
+
+.responsiveCarousel{
+    padding: 20px 0px;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+@media (max-width: 376px) {
+
+    .responsiveCarousel{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 640px) {
+    .responsiveCarousel{width: 100%;}
+}
+@media (min-width: 768px) {
+    .responsiveCarousel{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+@media (min-width: 1024px) {
+    .responsiveCarousel{width: 80%;}
+}
+@media (min-width: 1124px) {
+    .responsiveCarousel{width: 65%;}
+}
+@media (min-width: 1300px) {
+    .responsiveCarousel{width: 60%;}
+}
+@media (min-width: 1398px) {
+    .responsiveCarousel{width: 70%;}
+}
+@media (min-width: 1400px) {
+    .responsiveCarousel{width: 50%; padding: 0px;}
+}
+@media (min-width: 1425px) {
+    .responsiveCarousel{width: 80%; padding: 0px;}
+}
+@media (min-width: 1538px) {
+    .responsiveCarousel{width: 70%; padding: 0px;}
+}
+@media (min-width: 1638px) {
+    .responsiveCarousel{width: 60%; padding: 0px;}
+}
+
+
+
+
+
+

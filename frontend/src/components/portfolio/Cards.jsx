@@ -10,7 +10,7 @@ const CardsPortfolio = ({img, name, description, linkWeb, linkGit}) => {
 
     <div className="relative w-full object-cover overflow-hidden rounded-md shadow-xl border-2 border-sky-500 duration-300 hover:shadow-sky-200">
 
-    <div className="cards ">
+    <div className="cards">
   
         <img className="" src={img} alt="" width={300}/>
 

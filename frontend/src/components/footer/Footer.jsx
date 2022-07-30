@@ -27,7 +27,7 @@ const Footer = ({dark}) => {
                 </div>
 
                 <div className="text-center flex flex-col mb-5 justify-end gap-2 text-gray-800">
-                    <h2>Diseñado y contruido por <span className="hover:text-sky-400 hover:font-bold duration-200 ease-linear">Tomás Aranda</span></h2>
+                    <h2>Diseñado y construido por <span className="hover:text-sky-600 font-bold duration-200 ease-linear">Tomás Aranda</span></h2>
                     <p>&copy; copyright 2022 Todos los derechos reservados</p>
                 </div>
                 

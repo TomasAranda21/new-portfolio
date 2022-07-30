@@ -21,7 +21,7 @@ const About = ({dark}) => {
             <div className="lg:w-1/3 flex flex-col gap-5 font-medium dark:text-gray-50">
 
               <h1 className="text-3xl font-fontTitles uppercase font-bold ">Sobre mi</h1>
-              <p>A mi corta edad realicé un negocio online que me permitió comprar mi primera computadora y pude encontrar este maravilloso mundo de la programación. Lo que al principio solo fue un pasa tiempo, con estudio y dedicación se convirtió de las cosas que más amo hacer en mi día a día. Por lo que siempre trabajo para lograr el mejor resultado en cada proyecto que tengo en mis manos.</p>
+              <p>A mi corta edad realicé un negocio online que me permitió comprar mi primera computadora y pude encontrar este maravilloso mundo de la programación. Lo que al principio solo fue un pasatiempo, con estudio y dedicación se convirtió de las cosas que más amo hacer en mi día a día. Por lo que siempre trabajo para lograr el mejor resultado en cada proyecto que tengo en mis manos.</p>
               
               <p>Lo próximo que quiero en mi vida es tener una oportunidad laboral y colaborar con mis conocimientos, además de seguir aprendiendo para seguir creciendo como persona y como profesional.</p>
             
@@ -32,7 +32,7 @@ const About = ({dark}) => {
             </div>
 
             <div className='overflow-hidden  rounded-full relative bg-gray-50 dark:bg-gray-900'>
-              <img className="object-cover" src="https://res.cloudinary.com/dj1pp4ivb/image/upload/v1658004603/foto_mb98ww.png" alt="" width="340" />
+              <img className="object-cover" src="https://res.cloudinary.com/dj1pp4ivb/image/upload/v1658883669/foto-cs-min_gllnfr.png" alt="" width="340" />
             </div>
 
             <div className='lg:block hidden bg_about'>
